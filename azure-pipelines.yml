@@ -35,3 +35,17 @@ steps:
     configuration: '$(buildConfiguration)'
     
 - task: PublishBuildArtifacts@1
+
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    webSiteName: TestSitePipeline
+    #virtualApplication: # Optional
+    #package: '$(System.DefaultWorkingDirectory)\**\*.zip' 
+    #setParametersFile: # Optional
+    removeAdditionalFilesFlag: true # Optional
+    #excludeFilesFromAppDataFlag: false # Optional
+    #takeAppOfflineFlag: false # Optional
+    #additionalArguments: # Optional
+    #xmlTransformation: # Optional
+    #xmlVariableSubstitution: # Optional
+    #jSONFiles: # Optional
